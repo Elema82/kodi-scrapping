@@ -1,0 +1,20 @@
+{
+  "name": "kodi-scraping",
+  "version": "1.0.0",
+  "description": "# Open photocall.html file on browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "core-util-is": "^1.0.2",
+    "get-urls": "^9.2.0",
+    "mysql": "^2.18.1",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

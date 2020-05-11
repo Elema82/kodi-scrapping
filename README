@@ -1,0 +1,40 @@
+# Scraping Channels sources
+
+# Save on file the url photocall.html on console
+`curl http://photocall.tv/ > curl-photocall.html`
+
+# go on the final of curl-photocall.html and remove all script added, and add this code
+<div class="database"></div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="./scrapping.js"></script>
+
+# find and replace this code
+`<body ondragstart="return false" ondrop="return false" onselectstart="return false" oncontextmenu="return false">`
+by this
+`<body>`
+
+# find and replace all this code "img src="//photocall.xyz" by this "img src="http://photocall.xyz"
+
+# find and replace all this code "href="hB4j/" by this "href="http://photocall.tv/hB4j/"
+    where hB4j/ is changed day by day on photocall.html (check on code this string before execute this replace)
+
+# Open curl-photocall.html on any browser
+
+# Copy all queries result and save on queries.sql
+
+# import schema database on your mysql
+
+# Finally can takes the queries from the browser and puts on your database
+
+
+# Check url saved on source_channels
+    `SELECT id, target_url FROM source_channels where (target_url not like "http://%" and target_url not like "https://%")`
+
+
+# On index.js, configure de database params
+
+# Run this node command
+`node index.js`
+
+
+# Check the field target_url saved on source_channels
